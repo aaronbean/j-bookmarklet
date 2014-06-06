@@ -1,18 +1,18 @@
 javascript:(function() {
-	window.g = function() {
-		function G(element)
+	window.j = function() {
+		function J(element)
 		{
 			if (element.childNodes.length > 0) 
 			for (var i = 0; i < element.childNodes.length; i++) {
-				G(element.childNodes[i]);
+				J(element.childNodes[i]);
 			}
 
 			if (element.nodeType == Node.TEXT_NODE && element.nodeValue != '') {
-				element.textContent = element.textContent.replace(/[a-z]/g, 'g').replace(/[A-Z]/g, 'G');
+				element.textContent = element.textContent.replace(/[a-z]/g, 'j').replace(/[A-Z]/g, 'J');
 			}
 		}
 		var html = document.getElementsByTagName('html')[0];
-			G(html);
+			J(html);
 		};
-	g();
+	j();
 })();
